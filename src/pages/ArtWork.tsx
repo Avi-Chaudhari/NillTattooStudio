@@ -51,7 +51,7 @@ export default function ArtWork() {
             )
           }
         </div>
-        <div className='d-flex justify-content-center align-items-center py-5 bg-black text-white p-3'>
+        <div className='d-flex justify-content-center align-items-center py-5 bg-black text-white p-3 rounded-4 m-2'>
           <div className='row'>
             <div className='col-12'>
               <h1 className=' bebas-neue-regular mb-3' style={{ fontSize: "3rem" }}>Crafting Meaning Into Every ART</h1>
