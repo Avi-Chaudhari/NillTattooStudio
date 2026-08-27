@@ -1,0 +1,10 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  flex: 1;
+}

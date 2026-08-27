@@ -1,0 +1,9 @@
+.location-link {
+  color: white;           /* text + icon color */
+  text-decoration: none;  /* optional: remove underline */
+}
+
+.location-link:hover,
+.location-link:focus {
+  color: white;           /* keep same color on hover */
+}

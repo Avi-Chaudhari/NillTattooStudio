@@ -1,0 +1,10 @@
+
+.special-height-box {
+    height: 40dvh;
+  }
+
+@media (max-width: 768px) {
+  .special-height-box {
+    height: 25dvh;
+  }
+}
