@@ -5,11 +5,13 @@ import About from './pages/About'
 import ArtWork from './pages/ArtWork'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <div className="app-layout roboto">
         <Nav />
         <main className="hero-content">

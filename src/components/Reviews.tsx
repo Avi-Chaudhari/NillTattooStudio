@@ -10,7 +10,7 @@ export default function Reviews() {
   const visibleReviews = reviews.slice(activePage * cardsPerPage, activePage * cardsPerPage + cardsPerPage);
 
   return (
-    <section className="reviews-section" aria-labelledby="reviews-heading">
+    <section className="reviews-section bg-dark-subtle" aria-labelledby="reviews-heading">
       <h1 className="fw-bold bebas-neue-regular text-decoration-underline mb-5"><span style={{color:"grey"}} className=" text-decoration-underline">Happy </span>Clients </h1>
       <div className="reviews-grid ">
         {visibleReviews.map(({ id, review, rate, customer }) => (
