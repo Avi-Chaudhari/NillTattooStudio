@@ -46,7 +46,7 @@ export default function ArtWork() {
           {
             filteredItems.map((item) =>
               <div key={item.id} className='m-3'>
-                <img className='rounded-2 shadow-lg' width={"180px"} height={"300px"} src={item.src} alt="Nill Tattoo Studio" />
+                <img className='rounded-2 shadow-lg' width={"150px"} height={"250px"} src={item.src} alt="Nill Tattoo Studio" />
               </div>
             )
           }
