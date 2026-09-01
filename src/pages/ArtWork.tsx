@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import bgImage from '../assets/ArtWorkBG.png';
 import all from '../assets/artworks';
 import BookAppointment from '../components/BookAppointment';
@@ -8,6 +8,16 @@ import './ArtWork.css'
 export default function ArtWork() {
   const categories = ["all", "tattoo", "piercing", "sketch"];
   const [active, setActive] = useState("all");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setSelectedImage(null);
+    };
+
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, []);
 
   const filteredItems = active === "all"
     ?
@@ -46,7 +56,14 @@ export default function ArtWork() {
           {
             filteredItems.map((item) =>
               <div key={item.id} className='m-3'>
-                <img className='rounded-2 shadow-lg' width={"150px"} height={"250px"} src={item.src} alt="Nill Tattoo Studio" />
+                <button
+                  className="artwork-thumbnail"
+                  type="button"
+                  onClick={() => setSelectedImage(item.src)}
+                  aria-label={`View ${item.category} artwork`}
+                >
+                  <img className='rounded-2 shadow-lg' width={"150px"} height={"250px"} src={item.src} alt="Nill Tattoo Studio" />
+                </button>
               </div>
             )
           }
@@ -69,6 +86,16 @@ export default function ArtWork() {
           <ShowMap />
         </div>
       </div>
+      {selectedImage && (
+        <div className="artwork-modal" role="dialog" aria-modal="true" aria-label="Artwork preview" onClick={() => setSelectedImage(null)}>
+          <div className="artwork-modal-content" onClick={(event) => event.stopPropagation()}>
+            <button className="artwork-modal-close" type="button" onClick={() => setSelectedImage(null)} aria-label="Close artwork preview">
+              &times;
+            </button>
+            <img src={selectedImage} alt="Nill Tattoo Studio artwork preview" />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

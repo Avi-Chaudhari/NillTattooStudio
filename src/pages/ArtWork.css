@@ -8,3 +8,55 @@
     height: 25dvh;
   }
 }
+
+.artwork-thumbnail {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.artwork-thumbnail:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+.artwork-modal {
+  position: fixed;
+  z-index: 1080;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 80%);
+}
+
+.artwork-modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: min(90vw, 900px);
+  max-height: 90dvh;
+}
+
+.artwork-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 90dvh;
+  border-radius: 0.5rem;
+}
+
+.artwork-modal-close {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 2rem;
+  line-height: 1;
+}
