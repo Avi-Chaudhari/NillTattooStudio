@@ -1,4 +1,6 @@
 import Nill from '../assets/Nill.png'
+import Nill2 from '../assets/Nill2.png'
+import Nill3 from '../assets/Nill3.png'
 import Studio from '../assets/Studio.jpg'
 import Studio2 from '../assets/Studio2.jpg'
 import Studio3 from '../assets/Studio3.jpg'
@@ -34,7 +36,7 @@ export default function About() {
 
           <div className='row g-3 g-md-4 align-items-start mb-5'>
             <div className='col-6'>
-              <img src={Nill} alt="Artist at work" className='w-100 shadow-sm rounded-2' style={{ aspectRatio: "4 / 5", objectFit: "cover", filter: "grayscale(1)" }} />
+              <img src={Nill2} alt="Artist at work" className='w-100 shadow-sm rounded-2' style={{ aspectRatio: "4 / 5", objectFit: "cover", filter: "grayscale(1)" }} />
             </div>
             <div className='col-6'>
               <p>Every design begins with a conversation, a memory, or a feeling waiting to be made visible.</p>
@@ -48,7 +50,7 @@ export default function About() {
               <p className='mb-0'>Each appointment is approached with care, turning individual ideas into artwork made to last.</p>
             </div>
             <div className='col-6'>
-              <img src={Nill} alt="Artist in the studio" className='w-100 shadow-sm rounded-2' style={{ aspectRatio: "4 / 5", objectFit: "cover", filter: "grayscale(1)" }} />
+              <img src={Nill3} alt="Artist in the studio" className='w-100 shadow-sm rounded-2' style={{ aspectRatio: "4 / 5", objectFit: "cover", filter: "grayscale(1)" }} />
             </div>
           </div>
         </div>
