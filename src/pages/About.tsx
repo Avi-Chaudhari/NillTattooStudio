@@ -1,9 +1,9 @@
 import Nill from '../assets/Nill.png'
 import Nill2 from '../assets/Nill2.png'
 import Nill3 from '../assets/Nill3.png'
-import Studio from '../assets/Studio.jpg'
-import Studio2 from '../assets/Studio2.jpg'
-import Studio3 from '../assets/Studio3.jpg'
+import Studio2 from '../assets/Studio.jpg'
+import Studio from '../assets/Studio1.jpeg'
+import Studio3 from '../assets/Studio2.jpeg'
 import BookAppointment from '../components/BookAppointment'
 
 export default function About() {
